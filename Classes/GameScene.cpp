@@ -23,18 +23,18 @@ bool GameScene::init(){
 	gameLabel->setPosition(size.width - 100, size.height - 50);
 	this->addChild(gameLabel);
 
-	
+	/*
 	auto sprite = Sprite::create("game/twomb.png");
 	sprite->setPosition(size.width / 2, size.height / 2);
 	this->addChild(sprite);
-	
+	*/
 
 	std::string imgs[] = {
 		"game/game.png",
 		"game/game1.png",
 		"game/game2.png",
-		"game/game13.png",
-		"game/game14.png"
+		"game/game3.png",
+		"game/game4.png"
 	};
 	for (int i = 0; i < 5; i++){
 		auto sprite = Sprite::create(imgs[i]);

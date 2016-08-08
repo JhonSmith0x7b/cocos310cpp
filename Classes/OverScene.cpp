@@ -19,7 +19,7 @@ bool OverScene::init(){
 	}
 	auto size = Director::getInstance()->getWinSize();
 
-	auto sprite = Sprite::create("over/onemb.png");
+	auto sprite = Sprite::create("over/threemb.png");
 	sprite->setPosition(size.width / 2, size.height / 2);
 	this->addChild(sprite);
 
@@ -31,9 +31,9 @@ bool OverScene::init(){
 	std::string imgs[] = {
 		"over/over.png",
 		"over/over1.png",
-		"over/over2.png",
-		"over/over3.png",
-		"over/over4.png"
+		"over/over12.png",
+		"over/over13.png",
+		"over/over14.png"
 	};
 	for (int i = 0; i < 5; i++){
 		auto sprite = Sprite::create(imgs[i]);
