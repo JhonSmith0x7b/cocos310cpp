@@ -26,9 +26,9 @@ bool MainScene::init(){
 	std::string imgs[] = {
 		"main/main.png",
 		"main/main1.png",
-		"main/main2.png",
-		"main/main3.png",
-		"main/main4.png"
+		"main/main12.png",
+		"main/main13.png",
+		"main/main14.png"
 	};
 	for (int i = 0; i < 5; i++){
 		auto sprite = Sprite::create(imgs[i]);
@@ -41,7 +41,7 @@ bool MainScene::init(){
 	toShopItem->setColor(Color3B(111, 59, 156));
 	auto toImplementsItem = MenuItemFont::create("to Implements", CC_CALLBACK_1(MainScene::toImplementsCallBack, this));
 	toImplementsItem->setColor(Color3B(111, 59, 156));
-	auto menu = Menu::create(toGameItem, NULL);
+	auto menu = Menu::create(toGameItem, toShopItem,NULL);
 	menu->alignItemsVerticallyWithPadding(40);
 	menu->setPosition(size.width / 2, size.height / 2);
 	this->addChild(menu);

@@ -3,7 +3,7 @@
 #include "GameScene.h"
 #include "ShopScene.h"
 #include "OverScene.h"
-#include "hgsdk.h"
+//#include "hgsdk.h"
 #include <string>
 using namespace std;
 USING_NS_CC;
@@ -30,28 +30,28 @@ static void pushToOver(){
 
 bool HgsdkBridge::preloadOrNot(std::string* group){
 	if (*group == "rmain"){
-		std::vector<std::string> groups = { "main" };//////hgsdk//////
-		hgsdk::preloadGroups(groups, replaceToMain);//////hgsdk///////
+		//std::vector<std::string> groups = { "main" };//////hgsdk//////
+		//hgsdk::preloadGroups(groups, replaceToMain);//////hgsdk///////
 		//normal
-		//replaceToMain();
+		replaceToMain();
 	}
 	else if (*group == "pshop"){
-		std::vector<std::string> groups = { "shop" };//////hgsdk//////
-		hgsdk::preloadGroups(groups, pushToShop);//////hgsdk///////
+		//std::vector<std::string> groups = { "shop" };//////hgsdk//////
+		//hgsdk::preloadGroups(groups, pushToShop);//////hgsdk///////
 		//normal
-		//pushToShop();
+		pushToShop();
 	}
 	else if (*group == "rgame"){
-		std::vector<std::string> groups = { "game" };//////hgsdk//////
-		hgsdk::preloadGroups(groups, replaceToGame);//////hgsdk///////
+		//std::vector<std::string> groups = { "game" };//////hgsdk//////
+		//hgsdk::preloadGroups(groups, replaceToGame);//////hgsdk///////
 		//normal
-		//replaceToGame();
+		replaceToGame();
 	}
 	else if (*group == "pover"){
-		std::vector<std::string> groups = { "over" };//////hgsdk//////
-		hgsdk::preloadGroups(groups, pushToOver);//////hgsdk///////
+		//std::vector<std::string> groups = { "over" };//////hgsdk//////
+		//hgsdk::preloadGroups(groups, pushToOver);//////hgsdk///////
 		//normal
-		//pushToOver();
+		pushToOver();
 	}
 	return true;
 }
