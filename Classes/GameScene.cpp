@@ -19,20 +19,22 @@ bool GameScene::init(){
 	}
 	auto size = Director::getInstance()->getWinSize();
 	auto gameLabel = LabelTTF::create("GameScene", "Arial", 40);
-	gameLabel->setColor(Color3B(54, 255, 159));
+	gameLabel->setColor(Color3B(111, 59, 156));
 	gameLabel->setPosition(size.width - 100, size.height - 50);
 	this->addChild(gameLabel);
 
+	/*
 	auto sprite = Sprite::create("game/twomb.png");
 	sprite->setPosition(size.width / 2, size.height / 2);
 	this->addChild(sprite);
+	*/
 
 	std::string imgs[] = {
 		"game/game.png",
 		"game/game1.png",
 		"game/game2.png",
-		"game/game13.png",
-		"game/game14.png"
+		"game/game3.png",
+		"game/game4.png"
 	};
 	for (int i = 0; i < 5; i++){
 		auto sprite = Sprite::create(imgs[i]);
@@ -40,7 +42,7 @@ bool GameScene::init(){
 		this->addChild(sprite);
 	}
 	auto toOverItem = MenuItemFont::create("to Over", CC_CALLBACK_1(GameScene::toOverCallBack, this));
-	toOverItem->setColor(Color3B(54, 255, 159));
+	toOverItem->setColor(Color3B(111, 59, 156));
 	auto menu = Menu::create(toOverItem, NULL);
 	menu->alignItemsVerticallyWithPadding(40);
 	menu->setPosition(size.width / 2, size.height / 2);

@@ -14,7 +14,7 @@ bool ShopScene::init(){
 	}
 	auto size = Director::getInstance()->getWinSize();
 	auto shopLabel = LabelTTF::create("ShopScene", "Arial", 40);
-	shopLabel->setColor(Color3B(54, 255, 159));
+	shopLabel->setColor(Color3B(111, 59, 156));
 	shopLabel->setPosition(size.width - 100, size.height - 50);
 	this->addChild(shopLabel);
 	
@@ -32,7 +32,7 @@ bool ShopScene::init(){
 	}
 	
 	auto returnMainItem = MenuItemFont::create("return Main", CC_CALLBACK_1(ShopScene::returnMainCallBack, this));
-	returnMainItem->setColor(Color3B(54, 255, 159));
+	returnMainItem->setColor(Color3B(111, 59, 156));
 	auto menu = Menu::create(returnMainItem, NULL);
 	menu->alignItemsVerticallyWithPadding(40);
 	menu->setPosition(size.width / 2, size.height / 2);

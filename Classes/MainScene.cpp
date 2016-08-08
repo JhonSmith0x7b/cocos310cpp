@@ -20,15 +20,15 @@ bool MainScene::init(){
 	}
 	auto size = Director::getInstance()->getWinSize();
 	auto mainLabel = LabelTTF::create("MainScene", "Arial", 40);
-	mainLabel->setColor(Color3B(54, 255, 159));
+	mainLabel->setColor(Color3B(111, 59, 156));
 	mainLabel->setPosition(size.width - 100, size.height - 50);
 	this->addChild(mainLabel);
 	std::string imgs[] = {
 		"main/main.png",
 		"main/main1.png",
-		"main/main12.png",
-		"main/main13.png",
-		"main/main14.png"
+		"main/main2.png",
+		"main/main3.png",
+		"main/main4.png"
 	};
 	for (int i = 0; i < 5; i++){
 		auto sprite = Sprite::create(imgs[i]);
@@ -36,12 +36,12 @@ bool MainScene::init(){
 		this->addChild(sprite);
 	}
 	auto toGameItem = MenuItemFont::create("to Game", CC_CALLBACK_1(MainScene::toGameCallBack, this));
-	toGameItem->setColor(Color3B(54, 255, 159));
+	toGameItem->setColor(Color3B(111, 59, 156));
 	auto toShopItem = MenuItemFont::create("to Shop", CC_CALLBACK_1(MainScene::toShopCallBack, this));
-	toShopItem->setColor(Color3B(54, 255, 159));
+	toShopItem->setColor(Color3B(111, 59, 156));
 	auto toImplementsItem = MenuItemFont::create("to Implements", CC_CALLBACK_1(MainScene::toImplementsCallBack, this));
-	toImplementsItem->setColor(Color3B(54, 255, 159));
-	auto menu = Menu::create(toGameItem, toShopItem, NULL);
+	toImplementsItem->setColor(Color3B(111, 59, 156));
+	auto menu = Menu::create(toGameItem, NULL);
 	menu->alignItemsVerticallyWithPadding(40);
 	menu->setPosition(size.width / 2, size.height / 2);
 	this->addChild(menu);

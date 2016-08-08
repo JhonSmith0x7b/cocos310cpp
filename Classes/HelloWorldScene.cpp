@@ -43,12 +43,12 @@ bool HelloWorld::init()
 	//this->addChild(sprite);
 	auto startLabel = LabelTTF::create("V1.1StartScene", "Arial", 40);
 	startLabel->setPosition(size.width - 100, size.height - 50);
-	startLabel->setColor(Color3B(54, 255, 159));
+	startLabel->setColor(Color3B(111, 59, 156));
 	this->addChild(startLabel);
 	
 	auto toMainItem = MenuItemFont::create("to Main", CC_CALLBACK_1(HelloWorld::toMainCallback, this));
 	toMainItem->setPosition(size.width / 2, size.height / 2);
-	toMainItem->setColor(Color3B(54, 255, 159));
+	toMainItem->setColor(Color3B(111, 59, 156));
 	auto menu = Menu::create(toMainItem,  NULL);
 	menu->setPosition(0, 0); 
 	this->addChild(menu, 1);

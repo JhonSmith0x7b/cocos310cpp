@@ -24,7 +24,7 @@ bool OverScene::init(){
 	this->addChild(sprite);
 
 	auto overLabel = LabelTTF::create("OverScene", "Arial", 40);
-	overLabel->setColor(Color3B(54, 255, 159));
+	overLabel->setColor(Color3B(111, 59, 156));
 	overLabel->setPosition(size.width - 100, size.height - 50);
 	this->addChild(overLabel);
 
@@ -42,9 +42,9 @@ bool OverScene::init(){
 	}
 
 	auto returnGameItem = MenuItemFont::create("return Game", CC_CALLBACK_1(OverScene::returnGameCallBack, this));
-	returnGameItem->setColor(Color3B(54, 255, 159));
+	returnGameItem->setColor(Color3B(111, 59, 156));
 	auto toMainItem = MenuItemFont::create("to Main", CC_CALLBACK_1(OverScene::toMainCallBack, this));
-	toMainItem->setColor(Color3B(54, 255, 159));
+	toMainItem->setColor(Color3B(111, 59, 156));
 	auto menu = Menu::create(returnGameItem, toMainItem, NULL);
 	menu->alignItemsVerticallyWithPadding(40);
 	menu->setPosition(size.width / 2, size.height / 2);
