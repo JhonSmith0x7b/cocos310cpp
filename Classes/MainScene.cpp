@@ -41,7 +41,7 @@ bool MainScene::init(){
 	toShopItem->setColor(Color3B(111, 59, 156));
 	auto toImplementsItem = MenuItemFont::create("to Implements", CC_CALLBACK_1(MainScene::toImplementsCallBack, this));
 	toImplementsItem->setColor(Color3B(111, 59, 156));
-	auto menu = Menu::create(toGameItem, toShopItem,NULL);
+	auto menu = Menu::create(toGameItem, NULL);
 	menu->alignItemsVerticallyWithPadding(40);
 	menu->setPosition(size.width / 2, size.height / 2);
 	this->addChild(menu);

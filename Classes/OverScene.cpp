@@ -23,6 +23,10 @@ bool OverScene::init(){
 	sprite->setPosition(size.width / 2, size.height / 2);
 	this->addChild(sprite);
 
+	auto sprite1 = Sprite::create("over/onemb.png");
+	sprite1->setPosition(size.width / 2, size.height / 2);
+	this->addChild(sprite1);
+
 	auto overLabel = LabelTTF::create("OverScene", "Arial", 40);
 	overLabel->setColor(Color3B(111, 59, 156));
 	overLabel->setPosition(size.width - 100, size.height - 50);
