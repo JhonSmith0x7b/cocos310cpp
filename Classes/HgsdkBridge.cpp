@@ -3,10 +3,14 @@
 #include "GameScene.h"
 #include "ShopScene.h"
 #include "OverScene.h"
-#include "hgsdk.h"
 #include <string>
 using namespace std;
 USING_NS_CC;
+
+#if OPEN_HGSDK
+#include "hgsdk.h"
+#endif
+
 static void replaceToMain(){
 	auto scene = MainScene::createScene();
 	// run
@@ -30,28 +34,36 @@ static void pushToOver(){
 
 bool HgsdkBridge::preloadOrNot(std::string* group){
 	if (*group == "rmain"){
+#if OPEN_HGSDK
 		std::vector<std::string> groups = { "main" };//////hgsdk//////
 		hgsdk::preloadGroups(groups, replaceToMain);//////hgsdk///////
-		//normal
-		//replaceToMain();
+#else
+		replaceToMain();
+#endif
 	}
 	else if (*group == "pshop"){
+#if OPEN_HGSDK
 		std::vector<std::string> groups = { "shop" };//////hgsdk//////
 		hgsdk::preloadGroups(groups, pushToShop);//////hgsdk///////
-		//normal
-		//pushToShop();
+#else
+		pushToShop();
+#endif
 	}
 	else if (*group == "rgame"){
+#if OPEN_HGSDK
 		std::vector<std::string> groups = { "game" };//////hgsdk//////
 		hgsdk::preloadGroups(groups, replaceToGame);//////hgsdk///////
-		//normal
-		//replaceToGame();
+#else
+		replaceToGame();
+#endif
 	}
 	else if (*group == "pover"){
+#if OPEN_HGSDK
 		std::vector<std::string> groups = { "over" };//////hgsdk//////
 		hgsdk::preloadGroups(groups, pushToOver);//////hgsdk///////
-		//normal
-		//pushToOver();
+#else
+		pushToOver();
+#endif
 	}
 	return true;
 }
